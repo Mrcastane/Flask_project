@@ -1,0 +1,230 @@
+.index-body {
+  background: url("img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  height: 4rem;
+  background-color: #d71f28;
+  border-bottom: 5px solid #ffcd41;
+}
+.nav-container {
+  width: 80%;
+}
+
+.custom-btn {
+  border-radius: 20px; /* Adjust roundness */
+  background-color: white; /* White background */
+  color: black; /* Text color */
+  border: 1px solid #ddd; /* Optional border */
+  padding: 10px 10px !important; /* Adjust padding */
+  width: 100px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+
+form {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+}
+
+.form-div {
+  width: 85%;
+}
+
+.form-input {
+  border: 1px solid;
+  border-radius: 1rem;
+  font-family: -apple-system-body, "Wells Fargo Sans", Verdana, Arial, Helvetica,
+    sans-serif;
+  font-weight: 400;
+  align-self: stretch;
+}
+
+.btn-signin {
+  font-family: -apple-system-body, "Wells Fargo Sans", Verdana, Arial, Helvetica,
+    sans-serif;
+  background-color: #d71f28;
+  padding: 3rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  color: white;
+}
+.btn-signin:hover{
+  background-color: #ba0c14;
+}
+.font {
+  font-family: -apple-system-body, "Wells Fargo Serif", Georgia, serif;
+
+  font-weight: normal;
+}
+
+.investment-container {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: auto;
+  margin-top: 5rem;
+}
+.investment-container div {
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+footer {
+  background-color: #f7f3f0; /* Light background */
+  padding: 15px 0;
+}
+footer .container {
+  width: 80%;
+  margin: auto;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #333; /* Dark text */
+  font-size: 15px;
+  margin: 0 10px;
+  display: inline-block;
+  line-height: 2.5rem;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-links span {
+  color: #999; /* Separator color */
+  margin: 0 5px;
+}
+.footer-bottom {
+  font-size: 15px;
+  color: #666;
+}
+
+@media (max-width: 850px) {
+  .form-container {
+    width: 80%;
+  }
+  .investment-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 100%;
+  }
+  .investment-container {
+    width: 100%;
+  }
+
+  .form-div {
+    width: 100%;
+  }
+  .nav-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .form-input {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+    background-color: #d71f28;
+  }
+  .form-container {
+    padding: 1rem;
+  }
+}
+
+/* //////////////////////////////////// */
+/* INFO PAGE */
+.lookup-img {
+  width: 20rem; /* Set width */
+  height: 15rem; /* Set height */
+  background-image: url("img/image.png"); /* Path to your image */
+  background-size: cover; /* Scale image to cover div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+}
+.form-container_info {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+/* //////////////////////////////////// */
+/* Thank PAGE */
+/* Center content */
+.thankyou {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.thank-you-container {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style heading */
+.thank-you-container h1 {
+  color: #28a745; /* Green color */
+  font-size: 2rem;
+}
+
+/* Style paragraph */
+.thank-you-container p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Button styling */
+.thank-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background: #d71f28; /* Blue color */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.thank-btn:hover {
+  background: #a5181f; /* Blue color */
+}
