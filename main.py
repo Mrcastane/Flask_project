@@ -19,12 +19,13 @@ def get_greeting():
     else:
         return "Good Evening! 🌙"
 
-greet = get_greeting()
+
+
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', greetings = greet)
+    return render_template('index.html', greetings = get_greeting)
 
 
 @app.route('/submit', methods=['POST'])
@@ -62,4 +63,5 @@ def thankyou():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    # app.run(host="0.0.0.0", port=5000)
+    app.run(debug=True)

@@ -178,6 +178,17 @@ footer .container {
   justify-content: center;
   margin: auto;
 }
+
+@media (max-width: 450px) {
+  .form-container_info {
+    width: 100%;
+    padding: 1rem;
+  }
+  .lookup-img {
+    width: 100%;
+  }
+}
+
 /* //////////////////////////////////// */
 /* Thank PAGE */
 /* Center content */
