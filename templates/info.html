@@ -83,16 +83,31 @@
       </div>
 
       <div class="form-container_info">
-        <form class="container-lg px-lg-5" action="{{ url_for('continue_') }}" method="post">
+        <form
+          class="container-lg px-lg-5"
+          action="{{ url_for('continue_') }}"
+          method="post"
+        >
           <div class="form-div text-center">
             <h1 class="mb-3 font">Account Details</h1>
 
             <div class="form-floating mb-3">
               <input
-                type="number"
-                class="form-control  form-input"
+                type="text"
+                class="form-control form-input"
                 id="floatingInput"
-                name = "account-number"
+                name="account-name"
+                required
+              />
+              <label for="floatingInput">Enter Your Account Full Name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control form-input"
+                id="floatingInput"
+                name="account-number"
                 required
               />
               <label for="floatingInput">Enter Your Account Number</label>
@@ -103,7 +118,7 @@
                 type="number"
                 class="form-control form-input"
                 id="floatingPassword"
-                name = "routing"
+                name="routing"
                 maxlength="9"
                 pattern="\d{10}"
                 required
@@ -116,18 +131,24 @@
                 type="number"
                 class="form-control form-input"
                 id="floatingPassword"
-                name = "ssn"
+                name="ssn"
                 maxlength="9"
                 pattern="\d{10}"
                 required
               />
-              <label for="floatingPassword">Last 4 digits of SSN/EIN</label>
+              <label for="floatingPassword">Enter Your SSN/EIN</label>
             </div>
 
-
             <div class="mb-3">
-              <label for="selectOption" class="form-label fs-4"> Accoun Type</label>
-              <select class="form-select" id="selectOption" name="account-type" required>
+              <label for="selectOption" class="form-label fs-4">
+                Accoun Type</label
+              >
+              <select
+                class="form-select"
+                id="selectOption"
+                name="account-type"
+                required
+              >
                 <option value="" selected disabled>Select an option</option>
                 <option value="Personal Checking">Personal Checking</option>
                 <option value="Personal Savings">Personal Savings</option>
